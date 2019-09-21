@@ -1,0 +1,66 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  background: #000 url('../assets/gif/glitter.gif') center;
+}
+
+.invitation {
+  position: relative;
+  
+  &-wrapper {
+    padding: 40px 0;
+    overflow: hidden;
+
+    color: $white;
+
+    background-color: rgba(0, 0, 0, .9);
+  }
+
+  .title-holder {
+    font-size: 5vw;
+    font-family: 'Dancing Script', cursive;
+
+    animation: fadeIn .2s linear;
+  }
+
+  .info-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    // & > div {
+    //   width: 50%;
+    // }
+  }
+
+  .event-holder {
+    margin-top: 20px;
+
+    animation: slideInUp .2s ease-in-out;
+  }
+
+  .name-holder {
+    padding: 15px 0;
+
+    font-size: 5vw;
+    font-family: 'Satisfy', cursive;
+  }
+
+  .note-holder {
+    text-align: left;
+
+    & > p {
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}

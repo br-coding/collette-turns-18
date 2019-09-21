@@ -1,0 +1,82 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+$font-opensans: 'Open Sans';
+$font-axiforma: 'Axiforma';
+$font-axiforma-italic: 'Axiforma Italic';
+$font-myriad-pro: 'Myriad Pro';
+
+/// @type List
+$text-font-stack: $font-opensans, 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #000 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #003761 !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #EDEDED !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: #999 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #444 !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../assets/' !default;
+
+//Custom variable
+//text variables
+$link-text: #fdd011;
+$sapphire-blue: #09375b;
+$error-color: #c40e00;
+$neptune-blue: #769cb1;
+
+$gray87: #dedede;
+$gray86: #dbdbdb;
+$gray85: #555555;
+$gray76: #c2c2c2;
+$gray68: #444444;
+$gray67: #4c4c4c;
+$gray13: #212121;
+$gray164: #a4a4a4;
+$gray142: #8e8e90;
+
+$gray700: #434343;
+$gray400: #525252;
+$gray350: #787878;
+$gray300: #777779;
+$gray238: #eeeeee;
+$gray203: #cbcbcb;
+$gray200: #aeb3b9;
+$gray150: #ccc;
+$gray121: #797979;
+$gray29: #4a4a4a;
+
+//background variables
+$secondary-color: #769dbe;
+$select-background: #003760;
+$sky-blue: #dae5ea;
+
+
+//black and white
+$black: #000;
+$white: #fff;

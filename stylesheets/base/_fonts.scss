@@ -1,0 +1,17 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@include font-face($font-opensans, $base-url + 'fonts/', 'opensans-regular', 'opensans-regular');
+
+@include font-face($font-axiforma, $base-url + 'fonts/', 'Axiforma-Light', 'Axiforma-Light', 200);
+@include font-face($font-axiforma, $base-url + 'fonts/', 'Axiforma-Regular', 'Axiforma-Regular', 400);
+@include font-face($font-axiforma, $base-url + 'fonts/', 'Axiforma-Medium', 'Axiforma-Medium', 500);
+@include font-face($font-axiforma, $base-url + 'fonts/', 'Axiforma-SemiBold', 'Axiforma-SemiBold', 600);
+@include font-face($font-axiforma, $base-url + 'fonts/', 'Axiforma-ExtraBold', 'Axiforma-ExtraBold', 650);
+@include font-face($font-axiforma, $base-url + 'fonts/', 'Axiforma-Bold', 'Axiforma-Bold', 700);
+@include font-face($font-axiforma, $base-url + 'fonts/', 'Axiforma-Heavy', 'Axiforma-Heavy', 800);
+
+@include font-face($font-myriad-pro, $base-url + 'fonts/', 'MyriadPro-Regular', 'MyriadPro-Regular', 800);

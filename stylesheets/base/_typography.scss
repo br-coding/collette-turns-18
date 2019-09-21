@@ -1,0 +1,53 @@
+//main: ../main.scss
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: 200 125% / 1.4 $font-axiforma;
+}
+
+.title-wrapper {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.title-text {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .3px;
+  line-height: 3;
+  color: $gray142;
+  text-transform: uppercase;
+}
+
+.subtitle-text {
+  font-size: 20px;
+  letter-spacing: .3px;
+  color: $sapphire-blue;
+}
+
+.blue-title-text,
+.yellow-title-text {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.blue-title-text {
+  color: $sapphire-blue;
+}
+
+.yellow-title-text {
+  color: $link-text;
+}
+
+@include respond-to(sm-down) {
+  .title-text {
+    font-size: 13px;
+  }
+
+  .subtitle-text {
+    font-size: 18px;
+  }
+}
