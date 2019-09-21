@@ -3,7 +3,10 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-body {
+
+.invitation {
+  // position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,48 +14,61 @@ body {
   height: 100vh;
 
   background: #000 url('../assets/gif/glitter.gif') center;
-}
-
-.invitation {
-  position: relative;
   
   &-wrapper {
     padding: 40px 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 100%;
     overflow: hidden;
 
-    color: $white;
+    color: $black;
 
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 10px;
   }
 
   .title-holder {
-    font-size: 5vw;
+    font-size: 50px;
+    letter-spacing: 2px;
     font-family: 'Dancing Script', cursive;
 
-    animation: fadeIn .2s linear;
+    animation: slideInDown .3s linear;
   }
 
   .info-details {
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center; 
+    padding-top: 20px; 
+    margin: 0 auto;
+    width: 70%;
+    max-width: 100%;
 
-    // & > div {
-    //   width: 50%;
-    // }
+    & > div {
+      width: 50%;
+    }
   }
 
   .event-holder {
-    margin-top: 20px;
+    animation: slideInRight .3s ease-in-out;
+  }
 
-    animation: slideInUp .2s ease-in-out;
+  .image-holder {
+    text-align: center;
+
+    animation: slideInLeft .3s ease-in
+  }
+
+  .img {
+    width: 75%;
   }
 
   .name-holder {
     padding: 15px 0;
 
-    font-size: 5vw;
-    font-family: 'Satisfy', cursive;
+    font-size: 50px;
+    font-family: 'Great Vibes', cursive;
   }
 
   .note-holder {
@@ -61,6 +77,36 @@ body {
     & > p {
       text-align: center;
       font-size: 14px;
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  .invitation {
+    .info-details {
+      width: 86%;
+    }
+
+    .title-holder {
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .come-text {
+      font-size: 12px;
+    }
+
+    .name-holder {
+      font-size: 35px;
+      line-height: .9;
+    }
+
+    .note-holder > p {
+      font-size: 9px;
+    }
+
+    .img {
+      width: 100%;
     }
   }
 }
