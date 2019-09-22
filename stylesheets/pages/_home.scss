@@ -5,108 +5,264 @@
 // -----------------------------------------------------------------------------
 
 .invitation {
-  // position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-
-  background: #000 url('../assets/gif/glitter.gif') center;
-  
-  &-wrapper {
-    padding: 40px 0;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 100%;
-    overflow: hidden;
-
-    color: $black;
-
-    background-color: rgba(255, 255, 255, .8);
-    border-radius: 10px;
-  }
-
-  .title-holder {
-    font-size: 50px;
-    letter-spacing: 2px;
-    font-family: 'Dancing Script', cursive;
-
-    animation: slideInDown .3s linear;
-  }
-
-  .info-details {
+  .section-hero {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    padding-top: 20px; 
-    margin: 0 auto;
-    width: 70%;
-    max-width: 100%;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+    background: #000 url('../assets/gif/glitter.gif') center;
+    
+    &.hide {
+      opacity: 0;
+      height: 0;
+      max-height: 0;
 
-    & > div {
-      width: 50%;
+      animation: slideInUp .3s ease-in;
+    }
+
+    .invitation-wrapper {
+      padding: 40px 0;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 100%;
+      overflow: hidden;
+  
+      color: $black;
+  
+      background-color: rgba(255,220,115, .7);
+      border-radius: 10px;
+    }
+  
+    .title-holder {
+      font-size: 50px;
+      letter-spacing: 2px;
+      font-family: 'Dancing Script', cursive;
+  
+      animation: slideInDown .3s linear;
+    }
+  
+    .info-details {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      padding-top: 20px; 
+      margin: 0 auto;
+      width: 70%;
+      max-width: 100%;
+  
+      & > div {
+        width: 50%;
+      }
+    }
+  
+    .event-holder {
+      animation: slideInRight .3s ease-in-out;
+    }
+  
+    .image-holder {
+      text-align: center;
+  
+      animation: slideInLeft .3s ease-in
+    }
+  
+    .img {
+      width: 75%;
+    }
+  
+    .name-holder {
+      padding: 15px 0;
+  
+      font-size: 50px;
+      font-family: 'Great Vibes', cursive;
+    }
+  
+    .note-holder {
+      text-align: left;
+  
+      & > p {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+
+    .debut-types {
+      position: absolute;
+      left: 50%;
+
+      display: flex;
+      justify-content: center;
+      padding-top: 23px;
+
+      transform: translateX(-50%);
+    }
+
+    .link-holder {
+      display: flex;
+      flex-direction: column;
+
+      color: $white;
+
+      .fas {
+        overflow: hidden;
+
+        text-align: center;
+      }
+
+      @include on-event {
+        color: $gray200;
+
+        .fas {
+          animation: slideInDown .9s infinite;
+        }
+      }
     }
   }
 
-  .event-holder {
-    animation: slideInRight .3s ease-in-out;
-  }
+  .section-entourage {
+    position: relative;
+    z-index: 5;
+    
+    display: none;
+    padding: 52px 0;
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    max-height: 0;
+    opacity: 0;
 
-  .image-holder {
-    text-align: center;
+    color: $black;
 
-    animation: slideInLeft .3s ease-in
-  }
+    background: url('../assets/images/bg.png') no-repeat center;
+    background-size: cover;
 
-  .img {
-    width: 75%;
-  }
+    &.show {
+      display: block;
+      height: auto;
+      max-height: 100%;
+      opacity: 1;
+    }
 
-  .name-holder {
-    padding: 15px 0;
+    .entourage {
+      &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-    font-size: 50px;
-    font-family: 'Great Vibes', cursive;
-  }
+      &-holder {
+        width: 50%;
 
-  .note-holder {
-    text-align: left;
+        &:not(:last-child) {
+          padding-bottom: 60px;
+        }
+      }
 
-    & > p {
+      &-list {
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+        column-count: 2;
+      }
+    }
+
+    .header-holder {
+      position: relative;
+
+      padding-bottom: 30px;
+
       text-align: center;
-      font-size: 14px;
+    }
+
+    .title {
+      font-size: 50px;
+      font-family: 'Great Vibes', cursive;
+      text-align: center; 
+      -webkit-text-stroke: 2px $black;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .img {
+      width: 330px;
+    }
+
+    .item {
+      position: relative;
+
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .btn-holder {
+      position: fixed;
+      right: 30px;
+      bottom: 0;
+
+      font-size: 30px;
+
+      cursor: pointer;
+      transition: all .3s ease-in;
+
+      @include on-event {
+        bottom: 10px;
+
+        opacity: .5;
+      }
+    }
+
+    .bg-top {
+      position: absolute;
+      top: 0;
+
+      width: 100%;
+      height: 360px;
     }
   }
 }
 
 @include respond-to(sm-down) {
   .invitation {
-    .info-details {
-      width: 86%;
+    .section-hero {
+      .info-details {
+        width: 86%;
+      }
+  
+      .title-holder {
+        font-size: 34px;
+        line-height: 1;
+      }
+  
+      .come-text {
+        font-size: 12px;
+      }
+  
+      .name-holder {
+        font-size: 35px;
+        line-height: .9;
+      }
+  
+      .note-holder > p {
+        font-size: 9px;
+      }
+  
+      .img {
+        width: 100%;
+      }
     }
 
-    .title-holder {
-      font-size: 34px;
-      line-height: 1;
-    }
+    .section-entourage {
+      .entourage-holder {
+        width: 100%;
+      }
 
-    .come-text {
-      font-size: 12px;
-    }
+      .header-holder {
+        padding-bottom: 18px;
+      }
 
-    .name-holder {
-      font-size: 35px;
-      line-height: .9;
-    }
-
-    .note-holder > p {
-      font-size: 9px;
-    }
-
-    .img {
-      width: 100%;
+      .item {
+        font-size: 17px;
+      }
     }
   }
 }
